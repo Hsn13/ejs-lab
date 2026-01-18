@@ -13,9 +13,9 @@
   <ul>
     <% restaurant.menu.filter((item) => item.category === "mains").forEach((item) => { %>
       <li>
-        <P>Name: <%= item.name %></P>
+        <P>Name: <%= item.name %><%= item.rating===5 ? `⭐` : ``%></P>
         <p>Price: $<%= item.price %></p>
-        <p>Rating: <%= item.rating %>/5</p>
+        <p><%= item.rating%>/5</p>
         <p>Details: <%= item.details %></p>
       </li>
       
@@ -27,9 +27,9 @@
   <ul>
     <% restaurant.menu.filter((item) => item.category === "desserts").forEach((item) => { %>
       <li>
-        <P>Name: <%= item.name %></P>
+        <P>Name: <%= item.name %><%= item.rating===5 ? `⭐` : ``%></P>
         <p>Price: $<%= item.price %></p>
-        <p>Rating: <%= item.rating %>/5</p>
+        <p>Rating: <%= item.rating%>/5</p>
         <p>Details: <%= item.details %></p>
       </li>
       
@@ -41,9 +41,9 @@
   <ul>
     <% restaurant.menu.filter((item) => item.category === "sides").forEach((item) => { %>
       <li>
-        <P>Name: <%= item.name %></P>
+        <P>Name: <%= item.name %><%= item.rating===5 ? `⭐` : ``%></P>
         <p>Price: $<%= item.price %></p>
-        <p>Rating: <%= item.rating %>/5</p>
+        <p>Rating: <%= item.rating%>/5</p>
         <p>Details: <%= item.details %></p>
       </li>
       
