@@ -69,6 +69,17 @@ app.get("/menu", (req, res) => {
   res.render("menu.ejs", { restaurant: RESTAURANT });
 });
 
+app.get("/menu/:category", (req, res) => {
+  const category = req.params.category;
+  const capitalizedCategory = category.charAt(0).toUpperCase() + category.slice(1);
+  const menuItems = RESTAURANT.menu.filter(item => item.category === category);
+  res.render("category.ejs", {
+    restaurant: RESTAURANT,
+    category: capitalizedCategory,
+    menuItems,
+  });
+});
+
 app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });

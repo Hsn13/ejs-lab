@@ -9,7 +9,7 @@
   <%- include('partials/nav') %>
   <h1>Full Menu</h1>
   <h2>Mains</h2>
-
+  <hr>
   <ul>
     <% restaurant.menu.filter((item) => item.category === "mains").forEach((item) => { %>
       <li>
@@ -18,10 +18,12 @@
         <p>Rating: <%= item.rating %>/5</p>
         <p>Details: <%= item.details %></p>
       </li>
+      
     <% }) %>
   </ul>
 
   <h2>Desserts</h2>
+  <hr>
   <ul>
     <% restaurant.menu.filter((item) => item.category === "desserts").forEach((item) => { %>
       <li>
@@ -30,10 +32,12 @@
         <p>Rating: <%= item.rating %>/5</p>
         <p>Details: <%= item.details %></p>
       </li>
+      
     <% }) %>
   </ul>
 
   <h2>Sides</h2>
+  <hr>
   <ul>
     <% restaurant.menu.filter((item) => item.category === "sides").forEach((item) => { %>
       <li>
@@ -42,6 +46,7 @@
         <p>Rating: <%= item.rating %>/5</p>
         <p>Details: <%= item.details %></p>
       </li>
+      
     <% }) %>
   </ul>
   </ul>
